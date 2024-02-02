@@ -1,6 +1,10 @@
-fetch("https://api.punkapi.com/v2/beers")
-  .then((res) => res.json())
-  .then(showBeers);
+window.addEventListener("DOMContentLoaded", init);
+
+function init() {
+  fetch("https://api.punkapi.com/v2/beers")
+    .then((res) => res.json())
+    .then(showBeers);
+}
 
 function showBeers(beers) {
   beers.forEach(showBeer);
